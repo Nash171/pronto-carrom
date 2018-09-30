@@ -1,0 +1,19 @@
+<h2>Rankings</h2>
+<ul class="rankings">
+  <li *ngFor="let player of players">
+    <div class="rank-record-container">
+      <div class="player-rank">
+        # {{player.rank}}
+      </div>
+      <div class="player-img-container">
+        <img class="player-img" src="assets/players/player-{{player.id}}.png" alt="" />
+      </div>
+      <div class="player-name">
+        {{player.name}}
+      </div>
+      <div class="player-points">
+        {{player.points}}
+      </div>
+    </div>
+  </li>
+</ul>
