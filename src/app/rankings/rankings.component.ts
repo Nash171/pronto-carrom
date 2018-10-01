@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class RankingsComponent implements OnInit {
 
-  players: [];
+  players: Array<Object>;
 
   constructor(private dataService: DataService) {
 

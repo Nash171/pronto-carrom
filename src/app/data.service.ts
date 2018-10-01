@@ -26,7 +26,7 @@ export class DataService {
     ].sort(function(a, b) {
       return b.points - a.points;
     }).map(function(p, i) {
-      p.rank = prev == p.points ? rank : (rank = i+1);
+      p['rank'] = prev == p.points ? rank : (rank = i+1);
       prev = p.points;
       return p;
     });
