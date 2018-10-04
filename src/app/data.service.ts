@@ -8,7 +8,10 @@ export class DataService {
   constructor() { }
 
   getRankings(): Array<Object> {
-    var prev = 0;
+    var prev = {
+      rating: 0,
+      points: 0
+    };
     var rank = 1;
     return [
       { id: 1, name: 'Oshan', points: -3, matches: 2, win: 0, loss: 1, draw: 1, rating: 0 },
@@ -29,8 +32,8 @@ export class DataService {
     }).sort(function(a, b) {
       return (b.rating - a.rating)||(b.points - a.points);
     }).map(function(p, i) {
-      p['rank'] = prev == p.points ? rank : (rank = i+1);
-      prev = p.points;
+      p['rank'] = (prev.rating==p.rating && prev.points==p.points) ? rank : (rank = i+1);
+      prev = p;
       return p;
     });
   }
