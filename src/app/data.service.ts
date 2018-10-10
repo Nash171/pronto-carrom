@@ -15,10 +15,10 @@ export class DataService {
     var rank = 1;
     return [
       { id: 1, name: 'Oshan', points: -3, matches: 2, win: 0, loss: 1, draw: 1, rating: 0 },
-      { id: 2, name: 'Nalinda', points: -5, matches: 2, win: 1, loss: 1, draw: 0, rating: 0 },
+      { id: 2, name: 'Nalinda', points: -3, matches: 3, win: 2, loss: 1, draw: 0, rating: 0 },
       { id: 3, name: 'Harsha', points: 20, matches: 3, win: 2, loss: 0, draw: 1, rating: 0 },
       { id: 4, name: 'Kasun', points: -12, matches: 2, win: 0, loss: 1, draw: 1, rating: 0 },
-      { id: 5, name: 'Dinith', points: 7, matches: 2, win: 1, loss: 0, draw: 1, rating: 0 },
+      { id: 5, name: 'Dinith', points: 5, matches: 3, win: 1, loss: 1, draw: 1, rating: 0 },
       { id: 6, name: 'Chathura', points: -1, matches: 3, win: 1, loss: 2, draw: 0, rating: 0 },
       { id: 7, name: 'Mahesh', points: 6, matches: 3, win: 2, loss: 1, draw: 0, rating: 0 },
       { id: 8, name: 'Chamitha', points: -16, matches: 2, win: 0, loss: 2, draw: 0, rating: 0 },
