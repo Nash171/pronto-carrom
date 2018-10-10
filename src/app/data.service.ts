@@ -27,7 +27,7 @@ export class DataService {
       { id: 11, name: 'Ishan', points: -12, matches: 2, win: 0, loss: 2, draw: 0, rating: 0 },
       { id: 12, name: 'Anuradha', points: -6, matches: 2, win: 1, loss: 1, draw: 0, rating: 0 },
     ].map(function(p){
-      p['rating'] = (p.win*2 + p.draw*1)/p.matches;
+      p['rating'] = ((p.win*2 + p.draw*1)/p.matches).toFixed(2);
       return p;
     }).sort(function(a, b) {
       return (b.rating - a.rating)||(b.points - a.points);
