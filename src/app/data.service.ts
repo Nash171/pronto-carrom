@@ -22,10 +22,10 @@ export class DataService {
       { id: 6, name: 'Chathura', points: -1, matches: 3, win: 1, loss: 2, draw: 0, rating: 0 },
       { id: 7, name: 'Mahesh', points: 6, matches: 3, win: 2, loss: 1, draw: 0, rating: 0 },
       { id: 8, name: 'Chamitha', points: -16, matches: 2, win: 0, loss: 2, draw: 0, rating: 0 },
-      { id: 9, name: 'Nadeesh', points: 14, matches: 2, win: 2, loss: 0, draw: 0, rating: 0 },
+      { id: 9, name: 'Nadeesh', points: 22, matches: 3, win: 3, loss: 0, draw: 0, rating: 0 },
       { id: 10, name: 'Hirantha', points: 14, matches: 3, win: 2, loss: 1, draw: 0, rating: 0 },
       { id: 11, name: 'Ishan', points: -12, matches: 2, win: 0, loss: 2, draw: 0, rating: 0 },
-      { id: 12, name: 'Anuradha', points: -6, matches: 2, win: 1, loss: 1, draw: 0, rating: 0 },
+      { id: 12, name: 'Anuradha', points: -14, matches: 3, win: 1, loss: 2, draw: 0, rating: 0 },
     ].map(function(p){
       p['rating'] = (p.win*2 + p.draw*1)/p.matches;
       return p;
