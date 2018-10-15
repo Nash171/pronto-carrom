@@ -43,7 +43,6 @@ export class DataService {
     { id: 16, playerA: 9, playerB: 12, scoreA: 8, scoreB: 0},
     //semi
     { id: 13, playerA: 7, playerB: 2, scoreA: 6, scoreB: 5},
-    { id: 14, playerA: 9, playerB: 3, scoreA: 5, scoreB: 6},
   ]
 
   getRankings(): Array<Object> {
