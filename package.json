@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "dev": "ng serve --open",
     "prod": "ng build --prod --base-href /pronto-carrom/",
     "deploy": "npx ngh --dir=dist/appName"
   },
