@@ -9,21 +9,21 @@ export class DataService {
   constructor() { }
 
   players = [
-    { id: 1, name: 'Oshan', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 2, name: 'Nalinda', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 3, name: 'Harsha', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 4, name: 'Kasun', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 5, name: 'Dinith', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 6, name: 'Chathura', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 7, name: 'Mahesh', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 8, name: 'Chamitha', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 9, name: 'Nadeesh', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 10, name: 'Hirantha', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 11, name: 'Ishan', rating: 1000, w: 0, l: 0, d: 0 },
-    { id: 12, name: 'Anuradha', rating: 1000, w: 0, l: 0, d: 0 },
+    { id: 1, name: 'Oshan', rating: 980, w: 0, l: 1, d: 1 },
+    //{ id: 2, name: 'Nalinda', rating: 1000, w: 2, l: 2, d: 0 },
+    { id: 3, name: 'Harsha', rating: 1020, w: 2, l: 1, d: 1 },
+    { id: 4, name: 'Kasun', rating: 980, w: 0, l: 1, d: 1 },
+    { id: 5, name: 'Dinith', rating: 1000, w: 1, l: 1, d: 1 },
+    { id: 6, name: 'Chathura', rating: 1000, w: 1, l: 2, d: 0 },
+    { id: 7, name: 'Mahesh', rating: 1040, w: 3, l: 2, d: 0 },
+    { id: 8, name: 'Chamitha', rating: 980, w: 0, l: 2, d: 0 },
+    { id: 9, name: 'Nadeesh', rating: 1060, w: 5, l: 0, d: 0 },
+    { id: 10, name: 'Hirantha', rating: 1000, w: 2, l: 1, d: 0 },
+    { id: 11, name: 'Ishan', rating: 980, w: 0, l: 2, d: 0 },
+    { id: 12, name: 'Anuradha', rating: 1000, w: 1, l: 2, d: 0 },
   ];
 
-  matches = [
+  old_matches = [
     { id: 1, playerA: 1, playerB: 2, scoreA: 1, scoreB: 4, frames: 2},
     { id: 2, playerA: 4, playerB: 5, scoreA: 5, scoreB: 5, frames: 2},
     { id: 3, playerA: 7, playerB: 8, scoreA: 5, scoreB: 0, frames: 2},
@@ -39,7 +39,7 @@ export class DataService {
     //quater
     { id: 13, playerA: 3, playerB: 6, scoreA: 12, scoreB: 0, frames: 2},
     { id: 14, playerA: 7, playerB: 10, scoreA: 6, scoreB: 2, frames: 2},
-    { id: 15, playerA: 2, playerB: 5, scoreA: 3, scoreB: 1, frames: 2},
+    //{ id: 15, playerA: 2, playerB: 5, scoreA: 3, scoreB: 1, frames: 2},
     { id: 16, playerA: 9, playerB: 12, scoreA: 8, scoreB: 0, frames: 2},
     //semi
     { id: 13, playerA: 7, playerB: 2, scoreA: 6, scoreB: 5, frames: 2},
@@ -47,6 +47,8 @@ export class DataService {
     //final
     { id: 15, playerA: 9, playerB: 7, scoreA: 14, scoreB: 0, frames: 3},
   ]
+
+  matches = []
 
   getRankings(): Array<Object> {
     this.matches.map(function(match){
@@ -101,7 +103,7 @@ export class DataService {
     }
 
     var myChanceToWin = 1 / ( 1 + Math.pow(10, (opponentRating - myRating) / 400));
-    return Math.round(25 * (myGameResult - myChanceToWin) * (1 + scoreDiff/(12*frames)));
+    return Math.round(24 * (myGameResult - myChanceToWin) * (1 + scoreDiff/(12*frames)));
   }
 
   getNewRating(myRating, opponentRating, myGameResult, scoreDiff, frames) {
